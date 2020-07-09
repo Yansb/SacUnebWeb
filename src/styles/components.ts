@@ -41,6 +41,7 @@ export const Button = styled.button`
     outline: none;
   }
 `;
-export const Container = styled.div`
-  width: 100%;
-`;
+
+
+
+
