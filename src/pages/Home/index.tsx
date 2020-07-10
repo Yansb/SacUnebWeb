@@ -1,35 +1,46 @@
 import React from 'react';
 //import { useTheme } from "../../ThemeContext";
-import {Container, Input, Button} from './styles';
+import {Container, Content} from './styles';
+import {FiUser, FiArchive} from 'react-icons/fi';
+import logoImg from '../../assets/logo.png';
 // import { Container } from './styles';'
 
-export default function Home() {
+const SignIn: React.FC = () => {
   // const themeToggle = useTheme();
   return (
     <>
     <header>
    {/* <Button onClick={() => themeToggle.toggle()}>Toggle Theme</Button>  */} 
-    <picture>
-      <img src="" alt="Logo?!"/>
-    </picture>
+    <img src={logoImg} alt="Uneb - Universidade do estado da Bahia"/>
     </header>
     <Container>
-    <h1>Login </h1>
-    <form> 
-    <label htmlFor="email">Email</label>
-    <Input type="email" id="email"/>
-    <label htmlFor="senha">Senha</label>
-    <Input type="password" id="senha"/>
-    <Button>Acessar</Button>
-    </form>
+      <Content>
+        
+        <h1>Faça seu Login </h1>
+        <form> 
 
-    <div className="botoes">
-    <a href="#logado">Acessar como convidado</a>
-    <a href="#conteudo">Verificar status</a>
+          <input placeholder="E-mail" type="email" id="email"/>
 
-    </div>
+          <input placeholder="Senha" type="password" id="senha"/>
+
+          <button>Acessar</button>
+        </form>
+
+        <div className="botoes">
+          <a href="#logado">
+            <FiUser/> 
+            Acessar como convidado
+          </a>
+          <a href="#conteudo">
+            <FiArchive/>
+            Verificar chamados
+          </a>
+        </div>
+      </Content>
     
     </Container>
     </>
   );
 }
+
+export default SignIn;

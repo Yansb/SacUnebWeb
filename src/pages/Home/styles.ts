@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {shade} from 'polished';
 
 export const Container = styled.div`
   display: grid;
@@ -6,32 +7,21 @@ export const Container = styled.div`
   margin: 10% auto;
   height: auto;
   padding: 14px 10px;
-  background-color: white;
+  background-color: #575263;
+  border-radius: 2%;
   
   .botoes{
     display: flex;
     justify-content: space-between;
-    a{
-    text-decoration: none;
-    color: #0404c3;
-    font-size: 14px;
-    margin-top: 10px;
-    background-color: #545151;
-    padding: 10px;
-    transition: 0.5s filter;
-    border-radius: 6px;
-    &:hover{
-      color: orange;
-      filter: contrast(50%);
-    }
-  }
+    
+    
     
   }
 
   h1{
     justify-self: center;
     font-size: 42px;
-    color: black;
+    color: #f4ede8;
     margin-bottom: 20px;
    
   }
@@ -39,27 +29,71 @@ export const Container = styled.div`
 
 `;
 
-export const Button = styled.button`
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  place-content: center;
+
   width: 100%;
-  background-color: #a20808;
-  padding: 8px;
-  color: white;
-  border: none;
-  transition: 0.5s filter;
-  &:hover{
-    filter: brightness(75%);
+  max-width: 700px;
+
+  form{
+    margin: 80px 0;
+    width: 340px;
+    text-align: center;
+  }
+
+  input{
+    background: #232129;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #232129;
+    padding: 16px;
+    width: 100%;
+
+    &::placeholder{
+      color: #666360;
+    }
+
+    &+input{
+      margin-top: 8px;
+    }
   }
   
+  button{
+    background: #2c7fe6;
+    height: 56px;
+    border-radius: 10px;
+    border: 0;
+    padding: 0 16px;
+    color: #f4ede8;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 16px;
+    transition: background-color 0.2s;
 
-`;
+    &:hover{
+      background: ${shade(0.2, '#2c7fe6')}
+    }
+  }
 
+  a{
+      text-decoration: none;
+      color: #f4ede8;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      padding: 10px;
+      transition: color 0.5s filter;
+      border-radius: 10px;
 
-export const Input = styled.input`
-  width: 100%;
-  margin-bottom: 10px;
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-  padding: 4px;
-
+      svg{
+        margin-right: 8px;
+      }
+      &:hover{
+        color: #ff9000;
+      }
+    }
 `;
