@@ -6,18 +6,25 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: ${FuhthestBackground};
     color:${TextColor};
+    -webkit-font-smoothing: antialiased;   
+    .bg-login{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: baseline;
+      margin: 8% auto;
+      header{
+        img{
+          width: 120px;
+        }
+      }
+    }
   }
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: 0;
-  }
-
-  body{
-    background: #312e38;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;   
   }
 
   body, input, button{

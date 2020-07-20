@@ -4,7 +4,6 @@ import {shade} from 'polished';
 export const Container = styled.div`
   display: grid;
   width: 400px;
-  margin: 10% auto;
   height: auto;
   padding: 14px 10px;
   background-color: #575263;
@@ -33,25 +32,30 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   place-content: center;
-
   width: 100%;
   max-width: 700px;
 
   form{
-    margin: 80px 0;
+    margin: 60px 0;
     width: 340px;
     text-align: center;
+    display: grid;
+    a{
+      text-align: center;
+      justify-self: center;
+      font-size: 12px;
+      margin: 4px 0px;
+    }
   }
 
   input{
-    background: #232129;
-    color: #fff;
-    border-radius: 10px;
-    border: 2px solid #232129;
+    background: #575263;
     padding: 16px;
     width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #232129;
 
     &::placeholder{
       color: #666360;

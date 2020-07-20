@@ -8,10 +8,13 @@ import logoImg from '../../assets/logo.png';
 const SignIn: React.FC = () => {
   // const themeToggle = useTheme();
   return (
-    <>
+    <div className="bg-login">
     <header>
    {/* <Button onClick={() => themeToggle.toggle()}>Toggle Theme</Button>  */} 
     <img src={logoImg} alt="Uneb - Universidade do estado da Bahia"/>
+    <h1>Bem vindo!</h1>
+    <h2>Faça seu login ao lado para continuar</h2>
+
     </header>
     <Container>
       <Content>
@@ -24,12 +27,15 @@ const SignIn: React.FC = () => {
           <input placeholder="Senha" type="password" id="senha"/>
 
           <button>Acessar</button>
+          <a href="#senha">Esqueceu sua senha?</a>
         </form>
+
+       
 
         <div className="botoes">
           <a href="#logado">
             <FiUser/> 
-            Acessar como convidado
+            Abertura de chamado
           </a>
           <a href="#conteudo">
             <FiArchive/>
@@ -39,7 +45,7 @@ const SignIn: React.FC = () => {
       </Content>
     
     </Container>
-    </>
+    </div>
   );
 }
 
