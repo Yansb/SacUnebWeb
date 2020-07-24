@@ -3,8 +3,15 @@ import { FuhthestBackground, TextColor } from "./components";
 
 
 const GlobalStyle = createGlobalStyle`
+  html{
+    background-image: linear-gradient(#f0685a 0, #f0685a 100%),
+    linear-gradient(#2c7fe6 0, #2c7fe6 100%);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: left, right;
+  }
   body{
-    background-color: ${FuhthestBackground};
+    /*background-color: ${FuhthestBackground};*/
     color:${TextColor};
     -webkit-font-smoothing: antialiased;   
     .bg-login{
@@ -14,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
       align-items: baseline;
       margin: 8% auto;
       header{
+        line-height: 2;
+        padding: 14px 0px;
         img{
           width: 120px;
         }

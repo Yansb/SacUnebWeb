@@ -9,12 +9,14 @@ const SignIn: React.FC = () => {
   // const themeToggle = useTheme();
   return (
     <div className="bg-login">
+     
     <header>
-   {/* <Button onClick={() => themeToggle.toggle()}>Toggle Theme</Button>  */} 
+    <a href="#home">
     <img src={logoImg} alt="Uneb - Universidade do estado da Bahia"/>
+        </a>
+   {/* <Button onClick={() => themeToggle.toggle()}>Toggle Theme</Button>  */} 
     <h1>Bem vindo!</h1>
     <h2>Faça seu login ao lado para continuar</h2>
-
     </header>
     <Container>
       <Content>

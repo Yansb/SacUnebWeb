@@ -11,10 +11,7 @@ export const Container = styled.div`
   
   .botoes{
     display: flex;
-    justify-content: space-between;
-    
-    
-    
+    justify-content: space-between;    
   }
 
   h1{
@@ -22,9 +19,7 @@ export const Container = styled.div`
     font-size: 42px;
     color: #f4ede8;
     margin-bottom: 20px;
-   
   }
-
 
 `;
 
@@ -58,7 +53,7 @@ export const Content = styled.div`
     border-bottom: 1px solid #232129;
 
     &::placeholder{
-      color: #666360;
+      color: #3a3939;
     }
 
     &+input{
