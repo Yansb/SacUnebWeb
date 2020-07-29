@@ -26,10 +26,14 @@ export const Shadow = theme("mode", {
   dark: "#fff2"
 });
 
-export const Button = styled.button`
+
+export const ButtonTheme = styled.button`
+  position: fixed;
+  top: 10px;
+  right:10px;
   background-color: ${MiddleSecondBackground};
   color: ${TextColor};
-  padding: 15px 30px;
+  padding: 10px 12px;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.2s;

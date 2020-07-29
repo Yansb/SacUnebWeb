@@ -1,20 +1,19 @@
 import React from 'react';
-//import { useTheme } from "../../ThemeContext";
+import { useTheme } from "../../ThemeContext";
+import {ButtonTheme} from '../../styles/components';
 import {Container, Content} from './styles';
 import {FiUser, FiArchive} from 'react-icons/fi';
 import logoImg from '../../assets/logo.png';
-// import { Container } from './styles';'
 
 const SignIn: React.FC = () => {
-  // const themeToggle = useTheme();
+   const themeToggle = useTheme();
   return (
     <div className="bg-login">
-     
+    <ButtonTheme onClick={() => themeToggle.toggle()}>Tema</ButtonTheme>  
     <header>
     <a href="#home">
     <img src={logoImg} alt="Uneb - Universidade do estado da Bahia"/>
         </a>
-   {/* <Button onClick={() => themeToggle.toggle()}>Toggle Theme</Button>  */} 
     <h1>Bem vindo!</h1>
     <h2>Faça seu login ao lado para continuar</h2>
     </header>
